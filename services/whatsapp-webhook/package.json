@@ -1,7 +1,8 @@
 {
   "name": "whatsapp-logging-system",
   "version": "1.0.0",
-  "description": "WhatsApp message logging system using Node.js and Supabase",
+  "description": "WhatsApp webhook: logs messages to Supabase and routes them through the intent agent",
+  "engines": { "node": ">=18" },
   "main": "server.js",
   "scripts": {
     "start": "node server.js"

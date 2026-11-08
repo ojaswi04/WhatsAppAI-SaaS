@@ -375,6 +375,11 @@ def delete_product(
 		raise HTTPException(status_code=500, detail=str(exc))
 
 
+# --- WhatsApp agent: intent routing + human handoff ---
+from agent_api import router as agent_router  # noqa: E402
+
+app.include_router(agent_router)
+
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run("view_orders:app", port=8000, reload=True)
